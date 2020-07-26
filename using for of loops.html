@@ -1,0 +1,22 @@
+<script>
+
+function*  nums(){
+    console.log('in fn nums');
+ yield 4;
+ console.log('in fn nums');
+ yield 5;
+ console.log('in fn nums');
+ yield 6;
+ console.log('in fn nums');
+
+}
+const obj = {}
+obj[Symbol.iterator] = nums ;
+
+for (let num of obj) {
+    console.log ('iterated for-of loop')
+    console.log(num);
+
+}
+
+</script>
